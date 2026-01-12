@@ -15,9 +15,9 @@ $(Your Game Description)
 ### Controls
 
 Keyboard:
- - $(Game Control 01)
- - $(Game Control 02)
- - $(Game Control 03)
+ - WASD : Movement
+ - Arrows : Movement
+ - Space : Jump
 
 ### Screenshots
 
@@ -25,9 +25,10 @@ _TODO: Show your game to the world, animated GIFs recommended!._
 
 ### Developers
 
- - $(Developer 01) - $(Role/Tasks Developed)
- - $(Developer 02) - $(Role/Tasks Developed)
- - $(Developer 03) - $(Role/Tasks Developed)
+ - David Arreciado - Programmer/
+ - Nil Brillarelli - Programmer/
+ - Luca Calveiro   - Programmer/
+ - Didac March     - Programmer/
 
 ### Links
 
