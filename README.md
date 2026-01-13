@@ -25,7 +25,7 @@ _TODO: Show your game to the world, animated GIFs recommended!._
 
 ### Developers
 
- - David Arreciado - Programmer/
+ - David Arreciado - Programmer/Assets research
  - Nil Brillarelli - Programmer/
  - Luca Calveiro   - Programmer/
  - Didac March     - Programmer/
@@ -34,7 +34,6 @@ _TODO: Show your game to the world, animated GIFs recommended!._
 
  - YouTube Gameplay: $(YouTube Link)
  - itch.io Release: $(itch.io Game Page)
- - Steam Release: $(Steam Game Page)
 
 ### License
 
@@ -42,4 +41,4 @@ This game sources are licensed under MIT license. Check [LICENSE](LICENSE) for f
 
 $(Additional Licenses)
 
-*Copyright (c) $(Year) $(Developers Names)*
+*Copyright (c) 2026 David, Nil, Didac, Luca*
