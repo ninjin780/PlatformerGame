@@ -4,7 +4,7 @@
 
 ### Description
 
-$(Your Game Description)
+You play as a kitten abandoned at birth, alone in a vast and dangerous city. Your goal is to reach the adoption center, the only place where safety awaits. To survive the journey, you must leap across rooftops, navigate urban obstacles, and search for cat food to regain strength. Every jump and every meal brings you one step closer to a new home.
 
 ### Features
 
