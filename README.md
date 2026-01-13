@@ -33,7 +33,7 @@ _TODO: Show your game to the world, animated GIFs recommended!._
 ### Links
 
  - YouTube Gameplay: $(YouTube Link)
- - itch.io Release: [$(itch.io Game Page)](https://ninjin780.itch.io/nipcat)
+ - itch.io Release: [Nipcat](https://ninjin780.itch.io/nipcat)
 
 ### License
 
