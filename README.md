@@ -1,4 +1,4 @@
-## Delivery 01 - $(Game Title)
+## Delivery 01 - Nipcat
 
 ![$(Game Title)](Screenshots/screenshot01.png "$(Game Title)")
 
@@ -8,9 +8,9 @@ $(Your Game Description)
 
 ### Features
 
- - $(Game Feature 01)
- - $(Game Feature 02)
- - $(Game Feature 03)
+ - Double Jump
+ - Power Up for jumping higher
+ - X
 
 ### Controls
 
