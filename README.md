@@ -27,8 +27,8 @@ _TODO: Show your game to the world, animated GIFs recommended!._
 
  - David Arreciado - Programmer/Assets research
  - Nil Brillarelli - Programmer/
- - Luca Calveiro   - Programmer/
- - Didac March     - Programmer/
+ - Helena Fernández   - Programmer/
+ - Jon Roviras    - Programmer/
 
 ### Links
 
@@ -41,4 +41,4 @@ This game sources are licensed under MIT license. Check [LICENSE](LICENSE) for f
 
 $(Additional Licenses)
 
-*Copyright (c) 2026 David, Nil, Didac, Luca*
+*Copyright (c) 2026 David, Nil, Helena, Jon*
