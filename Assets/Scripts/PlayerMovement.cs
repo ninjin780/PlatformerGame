@@ -4,20 +4,28 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public Rigidbody2D Rb;
-    public float MoveSpeed;
-    private Vector2 moveDirection;
-    public InputActionReference Move;
-    public ParticleSystem GrassParticles;
+    [SerializeField]
+    private float Speed = 5.0f;
 
-    private void Update()
+    Rigidbody2D rb;
+    private float horizontalDir; // Horizontal move direction value [-1, 1]
+
+    void Start()
     {
-        moveDirection = Move.action.ReadValue<Vector2>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        Rb.linearVelocity = new Vector2(x:moveDirection.x * MoveSpeed,y:moveDirection.y * MoveSpeed);
-        GrassParticles.Play();
+        Vector2 velocity = rb.linearVelocity;
+        velocity.x = horizontalDir * Speed;
+        rb.linearVelocity = velocity;
     }
+    void OnMove(InputValue value)
+    {
+        
+        var inputVal = value.Get<Vector2>();
+    horizontalDir = inputVal.x;
+    }
+
 }
