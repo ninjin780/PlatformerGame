@@ -520,6 +520,7 @@ GameObject:
   - component: {fileID: 155923680}
   - component: {fileID: 155923688}
   - component: {fileID: 155923687}
+  - component: {fileID: 155923689}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -614,23 +615,27 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!4 &155923685
-Transform:
+--- !u!224 &155923685
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155923679}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5377, y: -3.5993, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.2302, y: 3.2302, z: 3.2302}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1918508236}
   - {fileID: 254180828}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 4.5377, y: -3.5993}
+  m_SizeDelta: {x: 0.11, y: 0.18}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &155923687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -658,7 +663,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -708,6 +713,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.11, y: 0.18}
   m_EdgeRadius: 0
+--- !u!114 &155923689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155923679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6232bf7bb3635c9438f4209b72ec191e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  Rb: {fileID: 155923680}
+  MoveSpeed: 5
+  Move: {fileID: 242764331}
 --- !u!1 &157312707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,6 +1385,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &242764331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Player/Move
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: a57d8ce1a440fce4ebd712540e3bc590, type: 3}
+  m_ActionId: 3543051c-c5e5-48dc-92f3-22d394c8adb4
 --- !u!1 &254180827
 GameObject:
   m_ObjectHideFlags: 0
@@ -6076,7 +6110,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 569069915}
-  - {fileID: 155923685}
   - {fileID: 496144590}
   - {fileID: 1821473471}
   - {fileID: 1740967021}
@@ -6086,3 +6119,4 @@ SceneRoots:
   - {fileID: 181460335}
   - {fileID: 1688736525}
   - {fileID: 425681419720282153}
+  - {fileID: 155923685}
