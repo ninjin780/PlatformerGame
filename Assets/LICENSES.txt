@@ -1,5 +1,6 @@
 ﻿Place here all the licenses for your assets:
 
+// Items
 Isometric Pet Kibble Bags & Food Bowls - Free License (Personal/Non-Commercial Use Only)
 
 You are free to:
@@ -17,7 +18,7 @@ Attribution is appreciated but not required.
 
 © ELR / popsometreasure
 
-
+// Cat player
 License 
 
     You can use this asset in any game project, personal or commercial
@@ -30,7 +31,7 @@ License
 License wording originally written by Admurin
 https://pop-shop-packs.itch.io/cats-pixel-asset-pack
 
-
+// Platforms and backgrounds
 😊 Thank you for acquiring this art!
 🎨 I made it with lots of love! 
 ❤ Hope you enjoy it! ❤
@@ -41,6 +42,11 @@ https://pop-shop-packs.itch.io/cats-pixel-asset-pack
 you can find me on social media! ❤
 
 https://linktr.ee/mandinhart
+
+// Font
+License: 
+
+CC0 Public Domain https://creativecommons.org/publicdomain/zero/1.0/
 
 
 
