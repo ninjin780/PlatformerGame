@@ -1,14 +1,17 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 //practica
 public class PoolSpawner : MonoBehaviour
 {
     public GameObject[] Spawners;       // Spawners for the coins
-    private Vector2 lastPos;            // Last pos a coin is spawned
-    private bool hasSpawnedBefore = false;
+    private List<Vector2> lastPos;      // Last pos a coin is spawned
+    private bool hasSpawnedBefore;      // Coin has spawned
 
     private void Start()
     {
+        lastPos = new List<Vector2>();
+        hasSpawnedBefore = false;
         SpawnNewCoin(null);
     }
     
@@ -21,19 +24,26 @@ public class PoolSpawner : MonoBehaviour
 
     private void SpawnNewCoin(Coin collectedCoin) {
         
-        GameObject newCoin = PoolManager.GetObject(); // Activate coin
-        if (newCoin == null) return; // Make sure coin is valid
+        for (int i = 0; i < Spawners.Length; i++){
+            
+            if (collectedCoin != null) {
+                lastPos.Remove(collectedCoin.transform.position);
+            }        
 
-        Vector2 newPos;
+            GameObject newCoin = PoolManager.GetObject(); // Activate coin
+            if (newCoin == null) return; // Make sure coin is valid
 
-        do
-        {
-            newPos = Spawners[Random.Range(0, Spawners.Length)].transform.position;
+            Vector2 newPos;
+
+            do
+            {
+                newPos = Spawners[Random.Range(0, Spawners.Length)].transform.position;
+            }
+            while (hasSpawnedBefore && lastPos.Contains(newPos)); // Make sure its not the same pos as the last coin spawned
+
+            newCoin.transform.position = newPos;
+            lastPos.Add(newPos);
+            hasSpawnedBefore = true;
         }
-        while (hasSpawnedBefore && newPos == lastPos); // Make sure its not the same pos as the last coin spawned
-
-        newCoin.transform.position = newPos;
-        lastPos = newPos;
-        hasSpawnedBefore = true;
     }
 }

@@ -5523,6 +5523,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 3543051c-c5e5-48dc-92f3-22d394c8adb4
     m_ActionName: 'Player/Move[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5eaf40bd-ddbd-4480-883d-ce0f49afab85
+    m_ActionName: 'WorldInteraction/Exit[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf0aea30-e9eb-4cb1-a69c-9220618572a5
+    m_ActionName: 'WorldInteraction/StartGame[/Keyboard/enter]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Player
@@ -10023,7 +10031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PoolManager
   Prefab: {fileID: 2348771292675837833, guid: 3795c248664e2154cbec7373dee94cf2, type: 3}
-  Capacity: 1
+  Capacity: 5
 --- !u!1 &1740967018
 GameObject:
   m_ObjectHideFlags: 0

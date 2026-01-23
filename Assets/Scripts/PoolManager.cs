@@ -54,8 +54,6 @@ public class PoolManager : MonoBehaviour
 
     public static void BackToPool(GameObject gameObject)
     {
-        // OPTION 1: Add object back to queue
-        //Instance._pool.Enqueue(gameObject);
 
         // Deactivate object
         gameObject.SetActive(false);
