@@ -9,7 +9,6 @@ public class Coin : MonoBehaviour
     {
         PoolManager.BackToPool(gameObject);
         OnCoinCollected?.Invoke(this);
-        // Hay que hacer que lo del object pooling se deshabilite en su posicion y aparezca en otra, esto se tiene que hacer en el spawner
     }
 
 }
