@@ -5,8 +5,9 @@ public class PlayerMovement : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField]
-    private float Speed = 5.0f;
+    private float speed = 5.0f;
 
+    public Animator animator;
     Rigidbody2D rb;
     private float horizontalDir; // Horizontal move direction value [-1, 1]
 
@@ -18,14 +19,20 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 velocity = rb.linearVelocity;
-        velocity.x = horizontalDir * Speed;
+        velocity.x = horizontalDir * speed;
         rb.linearVelocity = velocity;
+
+
+        animator.SetFloat("isWalking", rb.linearVelocity.magnitude);
+
     }
     void OnMove(InputValue value)
     {
         
         var inputVal = value.Get<Vector2>();
-    horizontalDir = inputVal.x;
-    }
+        horizontalDir = inputVal.x;
 
+        
+    }
+    
 }

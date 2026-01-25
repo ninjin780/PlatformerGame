@@ -4,9 +4,9 @@ public class NewMonoBehaviourScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [Header("Jump Parameters")]
-    public float jumpHeight = 3f;              
-    public float distanceToMaxHeight = 2f;     
-    public float horizontalSpeed = 5f;         
+    public float jumpHeight = 3.0f;              
+    public float distanceToMaxHeight = 2.0f;     
+    public float horizontalSpeed = 5.0f;         
     public float pressTimeToMaxJump = 0.25f; 
 
     [Header("Ground Detection")]
