@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TimerManager : MonoBehaviour
+public class Timer : MonoBehaviour
 {
     [Header("Timer Settings")]
     public float startTime = 60f;
