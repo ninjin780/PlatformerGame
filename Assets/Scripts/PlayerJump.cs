@@ -4,17 +4,18 @@ public class NewMonoBehaviourScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [Header("Jump Parameters")]
-    public float jumpHeight = 3.0f;              
-    public float distanceToMaxHeight = 2.0f;     
-    public float horizontalSpeed = 5.0f;         
-    public float pressTimeToMaxJump = 0.25f; 
+    public float JumpHeightPublic = 3.0f;              
+    public float DistanceToMaxHeight = 2.0f;     
+    public float HorizontalSpeed = 5.0f;         
+    public float PressTimeToMaxJump = 0.25f;
+    private float jumpHeight = 3.0f;
 
     [Header("Ground Detection")]
-    public ContactFilter2D groundFilter;
-    public float groundCheckDistance = 0.15f;
+    public ContactFilter2D GroundFilter;
+    public float GroundCheckDistance = 0.15f;
 
     [Header("Jump Limits")]
-    public int maxJumps = 2;
+    public int MaxJumps = 2;
 
     private Rigidbody2D rb;
     private float jumpStartTime;
@@ -41,12 +42,12 @@ public class NewMonoBehaviourScript : MonoBehaviour
         }
         if (Time.time > powerUpEndTime)
         {
-            jumpHeight = 3.0f;
+            jumpHeight = JumpHeightPublic;
         }
     }
     public void OnJumpStarted()
     {
-        if (jumpsUsed >= maxJumps)return;
+        if (jumpsUsed >= MaxJumps)return;
         setGravity();
         Vector2 velocity = rb.linearVelocity;
         velocity.y = GetJumpForce();
@@ -56,17 +57,17 @@ public class NewMonoBehaviourScript : MonoBehaviour
     }
     public void OnJumpFinished()
     {
-        float fraction = 1f - Mathf.Clamp01((Time.time - jumpStartTime) / pressTimeToMaxJump);
+        float fraction = 1f - Mathf.Clamp01((Time.time - jumpStartTime) / PressTimeToMaxJump);
         rb.gravityScale *= fraction;
     }
     private void setGravity()
     {
-        float gravity = (2 * jumpHeight * horizontalSpeed * horizontalSpeed) / (distanceToMaxHeight * distanceToMaxHeight);
+        float gravity = (2 * jumpHeight * HorizontalSpeed * HorizontalSpeed) / (DistanceToMaxHeight * DistanceToMaxHeight);
         rb.gravityScale = gravity / 9.81f;
     }
     private float GetJumpForce()
     {
-        return 2f * jumpHeight * horizontalSpeed / distanceToMaxHeight;
+        return 2f * jumpHeight * HorizontalSpeed / DistanceToMaxHeight;
     }
     private bool isPeakReached()
     {
@@ -81,7 +82,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private bool IsGrounded()
     {
         RaycastHit2D[] hits = new RaycastHit2D[1];
-        int count = Physics2D.Raycast(transform.position, Vector2.down, groundFilter, hits, groundCheckDistance);
+        int count = Physics2D.Raycast(transform.position, Vector2.down, GroundFilter, hits, GroundCheckDistance);
         return count > 0;
     }
     private void OnDrawGizmosSelected()
@@ -101,7 +102,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private float GetDistanceToGround()
     {
         RaycastHit2D[] hits = new RaycastHit2D[3];
-        int count=Physics2D.Raycast(transform.position, Vector2.down, groundFilter, hits, 10f);
+        int count=Physics2D.Raycast(transform.position, Vector2.down, GroundFilter, hits, 10f);
         if (count == 0) return 0f;
         return hits[0].distance;
     }
@@ -115,6 +116,6 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     private void PowerUpBoost(PowerUp collectedPower) {
         powerUpEndTime = Time.time + collectedPower.PowerUpTime;
-        jumpHeight = 6.0f;
+        jumpHeight = collectedPower.PowerUpForce;
     }
 }
