@@ -311,6 +311,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Coins_0
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 68
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e05dcae05fabd8c41b3253ea45526b6a
+      internalID: -1013428214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -325,6 +347,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Coins_0: -1013428214
       Pet_Kibble_Bags_0: -4124383014667345848
       Pet_Kibble_Bags_1: 779707903857119909
       Pet_Kibble_Bags_10: 9010173102252099466

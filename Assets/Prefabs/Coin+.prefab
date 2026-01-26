@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5122352502148613413}
   - component: {fileID: 92575240475064130}
   m_Layer: 0
-  m_Name: Coin
+  m_Name: Coin+
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2348771292675837833}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.33, y: 0.47, z: 0}
+  m_LocalPosition: {x: 61.33, y: 12.763, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -83,8 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 8812390497249962414, guid: b381494ae6ac3b24796743c0b008a0ea,
-    type: 3}
+  m_Sprite: {fileID: -1013428214, guid: b381494ae6ac3b24796743c0b008a0ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -106,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5292ec5d4cfa29844b27677c35bfa84a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coin
-  Value: 1
+  Value: 10
 --- !u!61 &92575240475064130
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -145,7 +144,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.19, y: 0.23}
+    oldSize: {x: 0.19, y: 0.24}
     newSize: {x: 0.19, y: 0.23}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
