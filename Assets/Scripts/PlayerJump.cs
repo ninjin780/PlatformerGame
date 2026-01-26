@@ -20,6 +20,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private float jumpStartTime;
     private float lastVelocityY;
 
+    private float powerUpEndTime = 0f;
     private int jumpsUsed = 0;
 
     void Start()
@@ -37,6 +38,10 @@ public class NewMonoBehaviourScript : MonoBehaviour
         if (isPeakReached())
         {
             tweakGravity();
+        }
+        if (Time.time > powerUpEndTime)
+        {
+            jumpHeight = 3.0f;
         }
     }
     public void OnJumpStarted()
@@ -101,4 +106,15 @@ public class NewMonoBehaviourScript : MonoBehaviour
         return hits[0].distance;
     }
 
+    private void OnEnable(){
+        PowerUp.OnPowerUpCollected += PowerUpBoost;
+    }
+    private void OnDisable(){
+        PowerUp.OnPowerUpCollected -= PowerUpBoost;
+    }
+
+    private void PowerUpBoost(PowerUp collectedPower) {
+        powerUpEndTime = Time.time + collectedPower.PowerUpTime;
+        jumpHeight = 6.0f;
+    }
 }
