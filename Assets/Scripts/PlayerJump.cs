@@ -11,10 +11,16 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     [Header("Ground Detection")]
     public ContactFilter2D groundFilter;
+    public float groundCheckDistance = 0.15f;
+
+    [Header("Jump Limits")]
+    public int maxJumps = 2;
 
     private Rigidbody2D rb;
     private float jumpStartTime;
     private float lastVelocityY;
+
+    private int jumpsUsed = 0;
 
     void Start()
     {
@@ -24,18 +30,24 @@ public class NewMonoBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isPeakReached())
+        if (IsGrounded())
+        {
+            jumpsUsed = 0;
+        }
+        if (isPeakReached())
         {
             tweakGravity();
         }
     }
     public void OnJumpStarted()
     {
+        if (jumpsUsed >= maxJumps)return;
         setGravity();
         Vector2 velocity = rb.linearVelocity;
         velocity.y = GetJumpForce();
         rb.linearVelocity = velocity;
         jumpStartTime = Time.time;
+        jumpsUsed++; 
     }
     public void OnJumpFinished()
     {
@@ -61,6 +73,12 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         rb.gravityScale *= 1.2f;
     }
+    private bool IsGrounded()
+    {
+        RaycastHit2D[] hits = new RaycastHit2D[1];
+        int count = Physics2D.Raycast(transform.position, Vector2.down, groundFilter, hits, groundCheckDistance);
+        return count > 0;
+    }
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
@@ -78,7 +96,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private float GetDistanceToGround()
     {
         RaycastHit2D[] hits = new RaycastHit2D[3];
-        Physics2D.Raycast(transform.position, Vector2.down, groundFilter, hits, 10f);
+        int count=Physics2D.Raycast(transform.position, Vector2.down, groundFilter, hits, 10f);
+        if (count == 0) return 0f;
         return hits[0].distance;
     }
 
