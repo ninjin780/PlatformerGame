@@ -5495,7 +5495,7 @@ MonoBehaviour:
   m_Actions: {fileID: -944628639613478452, guid: a57d8ce1a440fce4ebd712540e3bc590,
     type: 3}
   m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 1791952463}
+  m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
       m_Calls:
@@ -5535,10 +5535,10 @@ MonoBehaviour:
     m_ActionId: bf0aea30-e9eb-4cb1-a69c-9220618572a5
     m_ActionName: 'WorldInteraction/StartGame[/Keyboard/enter]'
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard
+  m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 519420031}
+  m_Camera: {fileID: 0}
 --- !u!61 &155923688
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11241,16 +11241,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WorldInteractions
       objectReference: {fileID: 0}
-    - target: {fileID: 7038271990321167780, guid: 5e6b4f0f3b28ce54586a5baba1354bd9,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 519420031}
-    - target: {fileID: 7038271990321167780, guid: 5e6b4f0f3b28ce54586a5baba1354bd9,
-        type: 3}
-      propertyPath: m_UIInputModule
-      value: 
-      objectReference: {fileID: 1791952463}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

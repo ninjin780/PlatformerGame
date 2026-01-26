@@ -21,8 +21,6 @@ public class PlayerMovement : MonoBehaviour
         Vector2 velocity = rb.linearVelocity;
         velocity.x = horizontalDir * speed;
         rb.linearVelocity = velocity;
-
-
         animator.SetFloat("isWalking", rb.linearVelocity.magnitude);
 
     }
