@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = velocity;
 
 
-        animator.SetFloat("isWalking", rb.linearVelocity.magnitude);
+        animator.SetFloat("isWalking", Mathf.Abs(rb.linearVelocity.x));
 
     }
     void OnMove(InputValue value)
