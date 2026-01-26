@@ -1005,94 +1005,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: indigo_0_74
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 359
-        width: 23
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 05109297555269a80800000000000000
-      internalID: -8460533800933719728
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_75
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 359
-        width: 25
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 91751d49a041f8a60800000000000000
-      internalID: 7678377925368960793
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_76
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 359
-        width: 27
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: db46a6495c7c412d0800000000000000
-      internalID: -3308800174797986627
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_77
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 359
-        width: 27
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b7c6dab59e9cc43c0800000000000000
-      internalID: -4373899133980939141
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: CatLeftRun1
       rect:
         serializedVersion: 2
@@ -1181,29 +1093,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: indigo_0_94
-      rect:
-        serializedVersion: 2
-        x: 643
-        y: 363
-        width: 29
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 43ddc39a497045a30800000000000000
-      internalID: 4202992687319407924
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_95
+      name: CatJumpDown
       rect:
         serializedVersion: 2
         x: 675
@@ -1220,94 +1110,6 @@ TextureImporter:
       bones: []
       spriteID: 403fbaca89339caa0800000000000000
       internalID: -6140319886117965052
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_96
-      rect:
-        serializedVersion: 2
-        x: 707
-        y: 359
-        width: 29
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b189728401374df50800000000000000
-      internalID: 6905270642433038363
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_97
-      rect:
-        serializedVersion: 2
-        x: 739
-        y: 359
-        width: 28
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: adad137a6873681b0800000000000000
-      internalID: -5654771230646871334
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_98
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 327
-        width: 27
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ab8a985b4d7995150800000000000000
-      internalID: 5861883329833969850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_99
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 327
-        width: 27
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 898ed01761a6605e0800000000000000
-      internalID: -1943749544545228648
       vertices: []
       indices: 
       edges: []
@@ -1335,29 +1137,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: indigo_0_106
-      rect:
-        serializedVersion: 2
-        x: 643
-        y: 327
-        width: 26
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 940e1468d330829a0800000000000000
-      internalID: -6257748119450951607
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_107
+      name: CatJumpUp
       rect:
         serializedVersion: 2
         x: 675
@@ -1379,468 +1159,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: indigo_0_108
-      rect:
-        serializedVersion: 2
-        x: 707
-        y: 331
-        width: 29
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eacb6cb23fd62c7a0800000000000000
-      internalID: -6358398832714793810
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_109
-      rect:
-        serializedVersion: 2
-        x: 739
-        y: 332
-        width: 29
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a32edc65383010360800000000000000
-      internalID: 7133987147363508794
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_219
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 103
-        width: 23
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9d6532cf071a59700800000000000000
-      internalID: 546520436433966809
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_220
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 103
-        width: 25
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 22175d2672ba02350800000000000000
-      internalID: 5989975690052989218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_221
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 103
-        width: 27
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 267ad4b9e12a676e0800000000000000
-      internalID: -1840105145395992734
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_222
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 103
-        width: 27
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: df9a8faad13595b50800000000000000
-      internalID: 6582383717266270717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CatRighttRun1
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 105
-        width: 29
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 242a54d0b8c2a8860800000000000000
-      internalID: 7532882302465319490
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CatRighttRun2
-      rect:
-        serializedVersion: 2
-        x: 544
-        y: 103
-        width: 29
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fbdd5169925bd7380800000000000000
-      internalID: -8971815692435857985
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CatRighttRun3
-      rect:
-        serializedVersion: 2
-        x: 577
-        y: 103
-        width: 28
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7a1cc6bcb7557ce10800000000000000
-      internalID: 2217835331685499303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CatRighttRun4
-      rect:
-        serializedVersion: 2
-        x: 608
-        y: 103
-        width: 29
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6d7da0b893bd04410800000000000000
-      internalID: 1459407319460403158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_239
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 107
-        width: 29
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8a1bdc6ef000ee590800000000000000
-      internalID: -7643171449304403544
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_240
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 103
-        width: 29
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 401fc7767d82df8b0800000000000000
-      internalID: -5116888696003694332
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_241
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 103
-        width: 29
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9d9cb1746967146b0800000000000000
-      internalID: -5313835697510299175
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_242
-      rect:
-        serializedVersion: 2
-        x: 737
-        y: 103
-        width: 28
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9b4961b249e5e9dd0800000000000000
-      internalID: -2477438754536123207
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_243
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 71
-        width: 27
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 68d1ecf36f5e48280800000000000000
-      internalID: -9041849306057925242
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_244
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 71
-        width: 27
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e92d431cafb919890800000000000000
-      internalID: -7453004407035866466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CatRighttRun5
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 74
-        width: 29
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 59728f5d3ae02f630800000000000000
-      internalID: 3959243119244355477
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_251
-      rect:
-        serializedVersion: 2
-        x: 643
-        y: 71
-        width: 26
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8ab2ab4e6764611c0800000000000000
-      internalID: -4533358498444334168
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_252
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 71
-        width: 29
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7b77e51f9cbf2fe30800000000000000
-      internalID: 4535964619472009143
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_253
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 75
-        width: 29
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 32471681669d6d840800000000000000
-      internalID: 5248621448265823267
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: indigo_0_254
-      rect:
-        serializedVersion: 2
-        x: 736
-        y: 76
-        width: 29
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7208934daf4459ac0800000000000000
-      internalID: -3849094462425169881
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: CatIdle1
       rect:
         serializedVersion: 2
@@ -1849,7 +1167,7 @@ TextureImporter:
         width: 14
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1871,7 +1189,7 @@ TextureImporter:
         width: 13
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1893,7 +1211,7 @@ TextureImporter:
         width: 11
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1915,7 +1233,7 @@ TextureImporter:
         width: 13
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1937,7 +1255,7 @@ TextureImporter:
         width: 14
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1973,6 +1291,11 @@ TextureImporter:
       CatIdle3: -958120059
       CatIdle4: 674496863
       CatIdle5: -236612620
+      CatJump1: -6358398832714793810
+      CatJump3: 6905270642433038363
+      CatJump5: 4202992687319407924
+      CatJumpDown: -6140319886117965052
+      CatJumpUp: 5848621152176287376
       CatLeftRun1: 4720467807391417438
       CatLeftRun2: 6141345235051903003
       CatLeftRun3: -7216760603879912722
@@ -1991,8 +1314,6 @@ TextureImporter:
       indigo_0_103: -6249747171523884860
       indigo_0_104: 779797655619132920
       indigo_0_106: -6257748119450951607
-      indigo_0_107: 5848621152176287376
-      indigo_0_108: -6358398832714793810
       indigo_0_109: 7133987147363508794
       indigo_0_11: -7680572674453705387
       indigo_0_110: 8177417933115963852
@@ -2255,9 +1576,6 @@ TextureImporter:
       indigo_0_88: 8154285948368697125
       indigo_0_89: -3670321251064162300
       indigo_0_9: 8247488313540311292
-      indigo_0_94: 4202992687319407924
-      indigo_0_95: -6140319886117965052
-      indigo_0_96: 6905270642433038363
       indigo_0_97: -5654771230646871334
       indigo_0_98: 5861883329833969850
       indigo_0_99: -1943749544545228648
