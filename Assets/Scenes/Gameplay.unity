@@ -56589,9 +56589,6 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
-<<<<<<< HEAD
---- !u!1 &1802000129
-=======
 --- !u!1 &1821473468
 GameObject:
   m_ObjectHideFlags: 0
@@ -56749,7 +56746,6 @@ MonoBehaviour:
   EmptyPowerUp: {fileID: 7262331395538457725, guid: 24d35d4534423a945838c6f8dc690e37,
     type: 3}
 --- !u!1 &1832797763
->>>>>>> parent of 97be822 (Merge branch 'main' of https://github.com/ninjin780/PlatformerGame)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
