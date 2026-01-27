@@ -48,23 +48,21 @@ public class PlayerJump : MonoBehaviour
             jumpsUsed = 0;
         }
        
-        if (isPeakReached())
+        else if (IsPeakReached())
         {
-            tweakGravity();
+            TweakGravity();
         }
         if (Time.time > powerUpEndTime)
         {
             jumpHeight = JumpHeightPublic;
         }
-        checkFallState();
-        Debug.Log(IsGrounded());
-
+        CheckFallState();
     }
     public void OnJumpStarted()
     {
         if (jumpsUsed >= MaxJumps) return;
 
-        setGravity();
+        SetGravity();
         Vector2 velocity = rb.linearVelocity;
         velocity.y = GetJumpForce();
         rb.linearVelocity = velocity;
@@ -77,7 +75,7 @@ public class PlayerJump : MonoBehaviour
         rb.gravityScale *= fraction;
 
     }
-    private void setGravity()
+    private void SetGravity()
     {
         float gravity = (2 * jumpHeight * HorizontalSpeed * HorizontalSpeed) / (DistanceToMaxHeight * DistanceToMaxHeight);
         rb.gravityScale = gravity / 9.81f;
@@ -86,7 +84,7 @@ public class PlayerJump : MonoBehaviour
     {
         return 2f * jumpHeight * HorizontalSpeed / DistanceToMaxHeight;
     }
-    private void checkFallState()
+    private void CheckFallState()
     {
         if (rb.linearVelocity.y > 0.0f)
         {
@@ -102,27 +100,23 @@ public class PlayerJump : MonoBehaviour
             Animator.SetBool("isFalling", false);
         }
     }
-    private bool isPeakReached()
+    private bool IsPeakReached()
     {
             bool reached = lastVelocityY > 0 && rb.linearVelocity.y <= 0;
             lastVelocityY = rb.linearVelocity.y;
             return reached;
     }
-    private void tweakGravity()
+    private void TweakGravity()
     {
         rb.gravityScale = rb.gravityScale * 1.2f;
     }
     private bool IsGrounded()
     {
-        
-        
             Vector2 origin = (Vector2)transform.position + Vector2.down * 0.5f;
             RaycastHit2D[] hits = new RaycastHit2D[2];
 
             int count = Physics2D.Raycast(origin, Vector2.down, GroundFilter, hits, GroundCheckDistance);
             return count > 0;
-
-        
     }
 
     private void OnDrawGizmosSelected()
@@ -142,7 +136,7 @@ public class PlayerJump : MonoBehaviour
     private float GetDistanceToGround()
     {
         RaycastHit2D[] hits = new RaycastHit2D[3];
-        int count=Physics2D.Raycast(transform.position, Vector2.down, GroundFilter, hits, 10f);
+        int count = Physics2D.Raycast(transform.position, Vector2.down, GroundFilter, hits, 10f);
         if (count == 0) return 0f;
         return hits[0].distance;
     }
