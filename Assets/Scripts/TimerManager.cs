@@ -18,7 +18,7 @@ public class TimerManager : MonoBehaviour
         UpdateTimerText();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (!isRunning)
             return;
