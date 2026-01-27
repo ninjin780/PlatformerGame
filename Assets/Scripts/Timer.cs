@@ -1,16 +1,44 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class Timer : MonoBehaviour
+public class TimerManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float startTime = 60f;
+    public string endSceneName = "ending";
+
+    private Text timeText;
+    private float currentTime;
+    private bool isRunning = true;
+
     void Start()
     {
-        
+        timeText = GetComponentInChildren<Text>();
+        currentTime = startTime;
+        UpdateTimerText();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (!isRunning)
+            return;
+
+        currentTime -= Time.deltaTime;
+
+        if (currentTime <= 0f)
+        {
+            currentTime = 0f;
+            isRunning = false;
+
+            SceneManager.LoadScene(endSceneName);
+            return;
+        }
+
+        UpdateTimerText();
+    }
+
+    private void UpdateTimerText()
+    {
+        timeText.text = "Time left:\n" + Mathf.CeilToInt(currentTime);
     }
 }
