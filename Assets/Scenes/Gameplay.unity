@@ -68341,17 +68341,12 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-<<<<<<< HEAD
-  - {fileID: 5522282427730914369}
-  - {fileID: 1690524967}
-=======
   - {fileID: 569069915}
   - {fileID: 496144590}
   - {fileID: 1821473471}
   - {fileID: 1740967021}
   - {fileID: 157312710}
   - {fileID: 1493599525}
->>>>>>> parent of 97be822 (Merge branch 'main' of https://github.com/ninjin780/PlatformerGame)
   - {fileID: 1171093572}
   - {fileID: 1791952462}
   - {fileID: 181460335}
