@@ -22,7 +22,7 @@ public class PlayerJump : MonoBehaviour
     private float lastVelocityY;
 
     private float powerUpEndTime = 0.0f;
-    private int jumpsUsed = 0;
+    private int jumpsUsed = 1;
 
 
     public Animator Animator;
@@ -45,7 +45,7 @@ public class PlayerJump : MonoBehaviour
 
         if (grounded)
         {
-            jumpsUsed = 0;
+            jumpsUsed = 1;
             Animator.SetBool("isJumping", !grounded);
 
             checkFallState(grounded);
@@ -103,7 +103,7 @@ public class PlayerJump : MonoBehaviour
     }
     private void tweakGravity()
     {
-        rb.gravityScale *= Mathf.Min(rb.gravityScale) * 1.2f;
+        rb.gravityScale = Mathf.Min(rb.gravityScale) * 1.2f;
     }
     private bool IsGrounded()
     {
