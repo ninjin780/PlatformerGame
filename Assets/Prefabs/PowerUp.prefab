@@ -154,5 +154,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PowerUp
   spriteRenderer: {fileID: 3093300708338943928}
   PowerUpTime: 15
+  PowerUpForce: 5
   EmptyPowerUp: {fileID: 7262331395538457725, guid: 24d35d4534423a945838c6f8dc690e37,
     type: 3}
