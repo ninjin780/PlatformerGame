@@ -4584,6 +4584,7 @@ GameObject:
   - component: {fileID: 155923689}
   - component: {fileID: 155923690}
   - component: {fileID: 155923691}
+  - component: {fileID: 155923692}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4691,7 +4692,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1918508236}
-  - {fileID: 254180828}
+  - {fileID: 930628772}
   - {fileID: 519420032}
   - {fileID: 2085362880}
   m_Father: {fileID: 0}
@@ -4855,27 +4856,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a6253d503821d418be903a2df47ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  JumpHeightPublic: 3
-  DistanceToMaxHeight: 2
-  HorizontalSpeed: 5
-  PressTimeToMaxJump: 0.25
-  GroundFilter:
+  JumpHeight: 3
+  DistanceToMaxHeight: 1.5
+  SpeedHorizontal: 1.5
+  PressTimeToMaxJump: 0.5
+  Animator: {fileID: 155923690}
+  WallSlideSpeed: 1
+  filter:
     useTriggers: 0
-    useLayerMask: 0
+    useLayerMask: 1
     useDepth: 0
     useOutsideDepth: 0
     useNormalAngle: 0
     useOutsideNormalAngle: 0
     layerMask:
       serializedVersion: 2
-      m_Bits: 256
+      m_Bits: 0
     minDepth: 0
     maxDepth: 100
     minNormalAngle: 0
     maxNormalAngle: 0
-  GroundCheckDistance: 0.15
-  MaxJumps: 2
-  Animator: {fileID: 0}
+--- !u!114 &155923692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155923679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c808fee510ad1840949a97a64bd0feb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionDetection
+  WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
+  WhatIsPlatform:
+    serializedVersion: 2
+    m_Bits: 0
+  GroundCheckPoint: {fileID: 1918508236}
+  FrontCheckPoint: {fileID: 930628772}
+  RoofCheckPoint: {fileID: 0}
+  CurrentPlatform: {fileID: 0}
+  Animator: {fileID: 155923690}
+  isGrounded: 0
+  isTouchingFront: 0
+  isPlatformGround: 0
+  isTouchingRoof: 0
+  distanceToGround: 0
+  groundAngle: 0
 --- !u!1 &156736371
 GameObject:
   m_ObjectHideFlags: 0
@@ -8183,37 +8212,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1 &254180827
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 254180828}
-  m_Layer: 0
-  m_Name: RoofDetector
-  m_TagString: Untagged
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &254180828
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 254180827}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0868, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 155923685}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &257291841
 GameObject:
   m_ObjectHideFlags: 0
@@ -27579,6 +27577,37 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &930628771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 930628772}
+  m_Layer: 0
+  m_Name: FrontDetector
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &930628772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930628771}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0449, y: -0.0051, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 155923685}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &930773048
 GameObject:
   m_ObjectHideFlags: 0
