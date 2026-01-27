@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class PlayerJump : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [Header("Jump Parameters")]
@@ -12,7 +12,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     [Header("Ground Detection")]
     public ContactFilter2D GroundFilter;
-    public float GroundCheckDistance = 0.15f;
+    public float GroundCheckDistance = 0.6f;
 
     [Header("Jump Limits")]
     public int MaxJumps = 2;
@@ -21,21 +21,36 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private float jumpStartTime;
     private float lastVelocityY;
 
-    private float powerUpEndTime = 0f;
+    private float powerUpEndTime = 0.0f;
     private int jumpsUsed = 0;
+
+
+    public Animator Animator;
+    private bool isFalling = false;
+
 
     void Start()
     {
         rb= GetComponent<Rigidbody2D>();
+        Animator = GetComponent<Animator>();
+
+        GroundFilter.useLayerMask = true;
+        GroundFilter.useTriggers = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (IsGrounded())
+        bool grounded = IsGrounded();
+
+        if (grounded)
         {
             jumpsUsed = 0;
+            Animator.SetBool("isJumping", !grounded);
+
+            checkFallState(grounded);
         }
+       
         if (isPeakReached())
         {
             tweakGravity();
@@ -44,21 +59,25 @@ public class NewMonoBehaviourScript : MonoBehaviour
         {
             jumpHeight = JumpHeightPublic;
         }
+        Debug.Log(IsGrounded());
+
     }
     public void OnJumpStarted()
     {
         if (jumpsUsed >= MaxJumps)return;
+
         setGravity();
         Vector2 velocity = rb.linearVelocity;
         velocity.y = GetJumpForce();
         rb.linearVelocity = velocity;
         jumpStartTime = Time.time;
-        jumpsUsed++; 
+        jumpsUsed++;
     }
     public void OnJumpFinished()
     {
         float fraction = 1f - Mathf.Clamp01((Time.time - jumpStartTime) / PressTimeToMaxJump);
         rb.gravityScale *= fraction;
+
     }
     private void setGravity()
     {
@@ -69,22 +88,40 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         return 2f * jumpHeight * HorizontalSpeed / DistanceToMaxHeight;
     }
+    private void checkFallState(bool grounded)
+    {
+        if (!grounded && rb.linearVelocity.y < -0.1f)
+            isFalling = true;
+        if (grounded)
+            isFalling = false;
+    }
     private bool isPeakReached()
     {
-        bool reached = lastVelocityY > 0 && rb.linearVelocity.y <= 0;
-        lastVelocityY = rb.linearVelocity.y;
-        return reached;
+            bool reached = lastVelocityY > 0 && rb.linearVelocity.y <= 0;
+            lastVelocityY = rb.linearVelocity.y;
+            return reached;
     }
     private void tweakGravity()
     {
-        rb.gravityScale *= 1.2f;
+        rb.gravityScale *= Mathf.Min(rb.gravityScale) * 1.2f;
     }
     private bool IsGrounded()
     {
-        RaycastHit2D[] hits = new RaycastHit2D[1];
-        int count = Physics2D.Raycast(transform.position, Vector2.down, GroundFilter, hits, GroundCheckDistance);
-        return count > 0;
+        
+        
+            Vector2 origin = (Vector2)transform.position + Vector2.down * 0.5f;
+            RaycastHit2D[] hits = new RaycastHit2D[2];
+
+            int count = Physics2D.Raycast(origin, Vector2.down, GroundFilter, hits, GroundCheckDistance);
+
+
+            //RaycastHit2D[] hits = new RaycastHit2D[1];
+            //int count = Physics2D.Raycast(transform.position, Vector2.down, GroundFilter, hits, GroundCheckDistance);
+            return count > 0;
+
+        
     }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
