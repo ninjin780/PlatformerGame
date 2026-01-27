@@ -22,16 +22,16 @@ public class PlayerJump : MonoBehaviour
     private float lastVelocityY;
 
     private float powerUpEndTime = 0.0f;
-    private int jumpsUsed = 1;
+    private int jumpsUsed = 0;
 
 
     public Animator Animator;
-    private bool isFalling = false;
+    private bool grounded;
 
 
     void Start()
     {
-        rb= GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
 
         GroundFilter.useLayerMask = true;
@@ -39,16 +39,13 @@ public class PlayerJump : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        bool grounded = IsGrounded();
+        grounded = IsGrounded();
 
         if (grounded)
         {
-            jumpsUsed = 1;
-            Animator.SetBool("isJumping", !grounded);
-
-            checkFallState(grounded);
+            jumpsUsed = 0;
         }
        
         if (isPeakReached())
@@ -59,12 +56,13 @@ public class PlayerJump : MonoBehaviour
         {
             jumpHeight = JumpHeightPublic;
         }
+        checkFallState();
         Debug.Log(IsGrounded());
 
     }
     public void OnJumpStarted()
     {
-        if (jumpsUsed >= MaxJumps)return;
+        if (jumpsUsed >= MaxJumps) return;
 
         setGravity();
         Vector2 velocity = rb.linearVelocity;
@@ -88,12 +86,21 @@ public class PlayerJump : MonoBehaviour
     {
         return 2f * jumpHeight * HorizontalSpeed / DistanceToMaxHeight;
     }
-    private void checkFallState(bool grounded)
+    private void checkFallState()
     {
-        if (!grounded && rb.linearVelocity.y < -0.1f)
-            isFalling = true;
-        if (grounded)
-            isFalling = false;
+        if (rb.linearVelocity.y > 0.0f)
+        {
+            Animator.SetBool("isJumping", true);
+        }
+        else if (rb.linearVelocity.y < 0.0f)
+        {
+            Animator.SetBool("isJumping", false);
+            Animator.SetBool("isFalling", true);
+        }
+        else if (grounded)
+        {
+            Animator.SetBool("isFalling", false);
+        }
     }
     private bool isPeakReached()
     {
@@ -103,7 +110,7 @@ public class PlayerJump : MonoBehaviour
     }
     private void tweakGravity()
     {
-        rb.gravityScale = Mathf.Min(rb.gravityScale) * 1.2f;
+        rb.gravityScale = rb.gravityScale * 1.2f;
     }
     private bool IsGrounded()
     {
@@ -113,10 +120,6 @@ public class PlayerJump : MonoBehaviour
             RaycastHit2D[] hits = new RaycastHit2D[2];
 
             int count = Physics2D.Raycast(origin, Vector2.down, GroundFilter, hits, GroundCheckDistance);
-
-
-            //RaycastHit2D[] hits = new RaycastHit2D[1];
-            //int count = Physics2D.Raycast(transform.position, Vector2.down, GroundFilter, hits, GroundCheckDistance);
             return count > 0;
 
         
