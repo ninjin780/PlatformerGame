@@ -67842,7 +67842,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
-<<<<<<< HEAD
 --- !u!1 &2145608036
 GameObject:
   m_ObjectHideFlags: 0
@@ -68270,8 +68269,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 199f398a66ebdf74cae36bccaa5920b8, type: 3}
-=======
->>>>>>> parent of 97be822 (Merge branch 'main' of https://github.com/ninjin780/PlatformerGame)
 --- !u!1001 &8447177103932721149
 PrefabInstance:
   m_ObjectHideFlags: 0
