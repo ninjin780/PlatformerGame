@@ -824,7 +824,7 @@ GameObject:
   - component: {fileID: 29408432}
   - component: {fileID: 29408434}
   - component: {fileID: 29408433}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3159,7 +3159,7 @@ GameObject:
   - component: {fileID: 119541089}
   - component: {fileID: 119541091}
   - component: {fileID: 119541090}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10636,7 +10636,7 @@ GameObject:
   - component: {fileID: 333503398}
   - component: {fileID: 333503400}
   - component: {fileID: 333503399}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11142,7 +11142,7 @@ GameObject:
   - component: {fileID: 342384757}
   - component: {fileID: 342384759}
   - component: {fileID: 342384758}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11371,7 +11371,7 @@ GameObject:
   - component: {fileID: 345115237}
   - component: {fileID: 345115236}
   - component: {fileID: 345115238}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14564,7 +14564,7 @@ GameObject:
   - component: {fileID: 469999872}
   - component: {fileID: 469999871}
   - component: {fileID: 469999870}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18377,7 +18377,7 @@ GameObject:
   - component: {fileID: 628461579}
   - component: {fileID: 628461578}
   - component: {fileID: 628461580}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24571,7 +24571,7 @@ GameObject:
   - component: {fileID: 824462406}
   - component: {fileID: 824462408}
   - component: {fileID: 824462407}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33837,7 +33837,7 @@ GameObject:
   - component: {fileID: 1125881035}
   - component: {fileID: 1125881037}
   - component: {fileID: 1125881036}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41736,7 +41736,7 @@ GameObject:
   - component: {fileID: 1347333347}
   - component: {fileID: 1347333349}
   - component: {fileID: 1347333348}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47281,7 +47281,7 @@ GameObject:
   - component: {fileID: 1499087795}
   - component: {fileID: 1499087797}
   - component: {fileID: 1499087796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51465,7 +51465,7 @@ GameObject:
   - component: {fileID: 1646371997}
   - component: {fileID: 1646371999}
   - component: {fileID: 1646371998}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54214,7 +54214,7 @@ GameObject:
   - component: {fileID: 1701703350}
   - component: {fileID: 1701703352}
   - component: {fileID: 1701703351}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54352,7 +54352,7 @@ GameObject:
   - component: {fileID: 1705418555}
   - component: {fileID: 1705418557}
   - component: {fileID: 1705418556}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54628,7 +54628,7 @@ GameObject:
   - component: {fileID: 1712315958}
   - component: {fileID: 1712315960}
   - component: {fileID: 1712315959}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59435,7 +59435,7 @@ GameObject:
   - component: {fileID: 1847686778}
   - component: {fileID: 1847686780}
   - component: {fileID: 1847686779}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65535,7 +65535,7 @@ GameObject:
   - component: {fileID: 2059871112}
   - component: {fileID: 2059871114}
   - component: {fileID: 2059871113}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72161,7 +72161,7 @@ GameObject:
   - component: {fileID: 2118636712}
   - component: {fileID: 2118636711}
   - component: {fileID: 2118636713}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
