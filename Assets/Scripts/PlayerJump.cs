@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PlayerJumper : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     [Header("Jump Parameters")]
     public float JumpHeightPublic = 3.0f;              
     public float DistanceToMaxHeight = 2.0f;     
@@ -39,7 +38,6 @@ public class PlayerJumper : MonoBehaviour
         Filter.useTriggers = false;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         grounded = IsGrounded();
@@ -59,8 +57,10 @@ public class PlayerJumper : MonoBehaviour
         }
         CheckFallState();
     }
+
     public void OnJumpStarted()
     {
+        Debug.Log(jumpsUsed);
         if (jumpsUsed >= MaxJumps) return;
 
         SetGravity();
@@ -70,21 +70,25 @@ public class PlayerJumper : MonoBehaviour
         jumpStartTime = Time.time;
         jumpsUsed++;
     }
+
     public void OnJumpFinished()
     {
         float fraction = 1f - Mathf.Clamp01((Time.time - jumpStartTime) / PressTimeToMaxJump);
         rb.gravityScale *= fraction;
 
     }
+
     private void SetGravity()
     {
         float gravity = (2 * jumpHeight * SpeedHorizontal * SpeedHorizontal) / (DistanceToMaxHeight * DistanceToMaxHeight);
         rb.gravityScale = gravity / 9.81f;
     }
+
     private float GetJumpForce()
     {
         return 2f * jumpHeight * SpeedHorizontal / DistanceToMaxHeight;
     }
+
     private void CheckFallState()
     {
         if (rb.linearVelocity.y > 0.0f)
@@ -101,16 +105,19 @@ public class PlayerJumper : MonoBehaviour
             Animator.SetBool("isFalling", false);
         }
     }
+
     private bool IsPeakReached()
     {
             bool reached = lastVelocityY > 0 && rb.linearVelocity.y <= 0;
             lastVelocityY = rb.linearVelocity.y;
             return reached;
     }
+
     private void TweakGravity()
     {
         rb.gravityScale = rb.gravityScale * 1.2f;
     }
+
     private bool IsGrounded()
     {
             Vector2 origin = (Vector2)transform.position + Vector2.down * 0.5f;
@@ -134,6 +141,7 @@ public class PlayerJumper : MonoBehaviour
 
         Gizmos.DrawLine(start, end);
     }
+
     private float GetDistanceToGround()
     {
         RaycastHit2D[] hits = new RaycastHit2D[3];
@@ -146,6 +154,7 @@ public class PlayerJumper : MonoBehaviour
     {
         PowerUp.OnPowerUpCollected += PowerUpBoost;
     }
+
     private void OnDisable()
     {
         PowerUp.OnPowerUpCollected -= PowerUpBoost;

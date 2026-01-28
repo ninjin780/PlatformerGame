@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    public static Action<PowerUp> OnPowerUpCollected;
+    public static event Action<PowerUp> OnPowerUpCollected;
     public SpriteRenderer spriteRenderer;
     [SerializeField]
     public float PowerUpTime = 60.0f;

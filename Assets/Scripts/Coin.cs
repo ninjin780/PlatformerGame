@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public static Action<Coin> OnCoinCollected;
+    public static event Action<Coin> OnCoinCollected;
 
     public int Value;
 

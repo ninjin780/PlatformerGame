@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//practica
 public class PoolSpawner : MonoBehaviour
 {
     public GameObject[] Spawners;       // Spawners for the coins
@@ -15,15 +14,18 @@ public class PoolSpawner : MonoBehaviour
         SpawnNewCoin(null);
     }
     
-    private void OnEnable(){
+    private void OnEnable()
+    {
         Coin.OnCoinCollected += SpawnNewCoin;
     }
-    private void OnDisable(){
+
+    private void OnDisable()
+    {
         Coin.OnCoinCollected -= SpawnNewCoin;
     }
 
-    private void SpawnNewCoin(Coin collectedCoin) {
-        
+    private void SpawnNewCoin(Coin collectedCoin)
+    {    
         for (int i = 0; i < Spawners.Length; i++){
 
             GameObject newCoin = PoolManager.GetObject(); // Activate coin
