@@ -15,7 +15,7 @@ public class PlayerJumper : MonoBehaviour
     public float GroundCheckDistance = 0.6f;
 
     [Header("Jump Limits")]
-    public int MaxJumps = 2;
+    public int MaxJumps = 1;
 
     private Rigidbody2D rb;
     private float jumpStartTime;
@@ -58,7 +58,7 @@ public class PlayerJumper : MonoBehaviour
         CheckFallState();
     }
 
-    public void OnJumpStarted()
+    public void OnJump()
     {
         Debug.Log(jumpsUsed);
         if (jumpsUsed >= MaxJumps) return;

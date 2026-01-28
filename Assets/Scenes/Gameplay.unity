@@ -480,7 +480,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -32.6, y: -17.7}
+  m_AnchoredPosition: {x: -32.600037, y: -17.700012}
   m_SizeDelta: {x: 387.59998, y: 85.41998}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1105861
@@ -4878,7 +4878,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   GroundCheckDistance: 0.6
-  MaxJumps: 2
+  MaxJumps: 1
   Animator: {fileID: 155923690}
 --- !u!1 &156736371
 GameObject:
@@ -35373,7 +35373,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25.1, y: -17.7}
+  m_AnchoredPosition: {x: 25.100037, y: -17.700012}
   m_SizeDelta: {x: 385.25, y: 87.17999}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1159436771
@@ -40245,7 +40245,7 @@ PrefabInstance:
     - target: {fileID: 2348771292675837833, guid: e410ec2858185d9418e308ce5fe6e1ef,
         type: 3}
       propertyPath: m_Name
-      value: Coin+
+      value: ValuableCoin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -73624,7 +73624,7 @@ PrefabInstance:
     - target: {fileID: 2348771292675837833, guid: e410ec2858185d9418e308ce5fe6e1ef,
         type: 3}
       propertyPath: m_Name
-      value: Coin+
+      value: ValuableCoin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

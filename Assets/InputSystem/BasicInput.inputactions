@@ -7,7 +7,7 @@
             "id": "09f19d17-80e9-4cc5-948c-aa360b39e22c",
             "actions": [
                 {
-                    "name": "JumpStarted",
+                    "name": "Jump",
                     "type": "Button",
                     "id": "cefa4c87-af9c-4fa9-8cb1-d7c19c9a2314",
                     "expectedControlType": "",
@@ -33,7 +33,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard",
-                    "action": "JumpStarted",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
