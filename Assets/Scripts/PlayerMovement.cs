@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     public ParticleSystem WalkParticles;
     public Animator Animator;
 
-
     Rigidbody2D rb;
     private float horizontalDir; // Horizontal move direction value [-1, 1]
      
@@ -20,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
     }
-
 
     void FixedUpdate()
     {
@@ -31,17 +29,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (Mathf.Abs(rb.linearVelocity.x) > 0.1f)
         {
-           if (!WalkParticles.isPlaying)
-                WalkParticles.Play();
-        
+           if (!WalkParticles.isPlaying) WalkParticles.Play();
         }
         else
         {
-            if (WalkParticles.isPlaying)
-                WalkParticles.Stop();
+            if (WalkParticles.isPlaying) WalkParticles.Stop();
         }
-
-
 
         if (horizontalDir > 0 && !facingRight)
         {
@@ -51,10 +44,8 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
-
     }
     
-
     void OnMove(InputValue value)
     {
         
@@ -62,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
         horizontalDir = inputVal.x;
         
     }
+
     private void Flip()
     {
         facingRight = !facingRight;

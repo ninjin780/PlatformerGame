@@ -24,10 +24,8 @@ public class PlayerJumper : MonoBehaviour
     private float powerUpEndTime = 0.0f;
     private int jumpsUsed = 0;
 
-
     public Animator Animator;
     private bool grounded;
-
 
     void Start()
     {

@@ -26,12 +26,14 @@ public class PoolSpawner : MonoBehaviour
 
     private void SpawnNewCoin(Coin collectedCoin)
     {    
-        for (int i = 0; i < Spawners.Length; i++){
+        for (int i = 0; i < Spawners.Length; i++)
+        {
 
             GameObject newCoin = PoolManager.GetObject(); // Activate coin
             if (newCoin == null) return; // Make sure coin is valid
 
-            if (collectedCoin != null) {
+            if (collectedCoin != null) 
+            {
                 lastPos.Remove(collectedCoin.transform.position);
             }
 
