@@ -4856,7 +4856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a6253d503821d418be903a2df47ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  JumpHeight: 3
+  JumpHeightPublic: 0
   DistanceToMaxHeight: 1.5
   SpeedHorizontal: 1.5
   PressTimeToMaxJump: 0.5
@@ -4871,7 +4871,7 @@ MonoBehaviour:
     useOutsideNormalAngle: 0
     layerMask:
       serializedVersion: 2
-      m_Bits: 0
+      m_Bits: 256
     minDepth: 0
     maxDepth: 100
     minNormalAngle: 0
