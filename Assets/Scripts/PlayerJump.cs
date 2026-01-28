@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerJumper : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class PlayerJumper : MonoBehaviour
 
     public Animator Animator;
     private bool grounded;
+    public AudioSource JumpSound;
 
 
     void Start()
@@ -60,7 +62,7 @@ public class PlayerJumper : MonoBehaviour
 
     public void OnJump()
     {
-        Debug.Log(jumpsUsed);
+        JumpSound.Play();
         if (jumpsUsed >= MaxJumps) return;
 
         SetGravity();
@@ -69,6 +71,8 @@ public class PlayerJumper : MonoBehaviour
         rb.linearVelocity = velocity;
         jumpStartTime = Time.time;
         jumpsUsed++;
+        
+
     }
 
     public void OnJumpFinished()
