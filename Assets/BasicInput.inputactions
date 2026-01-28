@@ -16,15 +16,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "JumpFinished",
-                    "type": "Button",
-                    "id": "4bcf04ba-ac27-47e4-ab60-2c7efbbf3470",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "Press(behavior=1)",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Move",
                     "type": "Value",
                     "id": "3543051c-c5e5-48dc-92f3-22d394c8adb4",
@@ -155,17 +146,6 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "64ae7dff-6f7d-47c0-a95e-a7ecf2f3fa9d",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard",
-                    "action": "JumpFinished",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         },
