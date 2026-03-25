@@ -69,15 +69,12 @@ public class PlayerJumper : MonoBehaviour
         rb.linearVelocity = velocity;
         jumpStartTime = Time.time;
         jumpsUsed++;
-        
-
     }
 
     public void OnJumpFinished()
     {
         float fraction = 1f - Mathf.Clamp01((Time.time - jumpStartTime) / PressTimeToMaxJump);
         rb.gravityScale *= fraction;
-
     }
 
     private void SetGravity()
